@@ -200,16 +200,16 @@
     <Sprite texture="%ModDir%/items/Weapons/bullet.png" sourcerect="33,153,54,10" depth="0.55" origin="0.5,0.5" />
     <Body width="40" height="14" density="40" />
     <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
-    <Projectile characterusable="false" hitscan="true" hitscancount="2" launchimpulse="10.0" removeonhit="true">
-      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="30" velocitymax="60" colormultiplier="255,150,150,175" scalemultiplier="1,0.6" />
-      <Attack structuredamage="6" targetforce="2" itemdamage="20" penetration="0.6" severlimbsprobability="0.6">
-        <Affliction identifier="gunshotwound" strength="30" />
-        <Affliction identifier="gunshotwound" strength="7" probability="0.3" />
+    <Projectile characterusable="false" hitscan="true" hitscancount="2" launchimpulse="15.0" removeonhit="true" maxtargetstohit="8">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="30" velocitymax="80" colormultiplier="255,150,150,175" scalemultiplier="1,0.6" />
+      <Attack structuredamage="15" targetforce="10" itemdamage="35" penetration="0.6" severlimbsprobability="1.0">
+        <Affliction identifier="gunshotwound" strength="37" />
+        <Affliction identifier="gunshotwound" strength="16" probability="0.3" />
         <Affliction identifier="gunshotwound" strength="18" probability="0.2" />
         <!--额外概率造成大出血-->
         <Affliction identifier="bleeding" strength="35" />
-        <Affliction identifier="bleeding" strength="60" probability="0.1" />
-        <Affliction identifier="bleeding" strength="80" probability="0.03" />
+        <Affliction identifier="bleeding" strength="60" probability="0.2" />
+        <Affliction identifier="bleeding" strength="80" probability="0.1" />
         <Affliction identifier="stun" strength="0.1" probability="0.4" />
       </Attack>
       <StatusEffect type="OnImpact" target="UseTarget">
